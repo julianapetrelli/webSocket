@@ -7,31 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Socket IO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <form action="chat.html">
-        <div class="container">
-            <div class="row">
-                <select name="select_room" id="select_room">
-                    <option value="-1">Selecione a sala</option>
-                    <option value="node">Node</option>
-                    <option value="java">Java</option>
-                    <option value="reactjs">ReactJS</option>
-                    <option value="elixir">Elixir</option>
-                </select>
-            </div>
+    <div class="min-h-screen bg-cover bg-gray-100 py-6 flex flex-col justify-center sm:py-12" style="background-image: url('./assets/dino-reichmuth-kk3W5-0b6e0-unsplash.jpg');">
+        <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+            <div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20 bg-clip-padding bg-opacity-60 border border-gray-200" style="backdrop-filter: blur(10px);">
+                <div class="max-w-md mx-auto w-72">
+                    <div class="flex justify-center align-center pb-8">
+                        <img src="https://sp-ao.shortpixel.ai/client/q_glossy,ret_img,w_256/https://itsolution24x7.com/blog/wp-content/uploads/2020/06/socketio.png" class="w-36" alt="Logo socket.io">
+                    </div>
+                    <form action="chat.html">
+                        <div>
+                            <div class="my-4">
+                                <label for="first_name" class="form-label block mb-2 text-sm font-medium text-gray-900">Digite o seu usuário</label>
+                                <input data-tooltip-target="tooltip-default" type="text" name="username" id="first_name" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Usuário" required>
+                            </div>
 
-            <div class="row">
-                <label class="form-label">Digite seu usuário</label>
-                <input type="text" name="username" placeholder="username" />
-            </div>
+                            <label for="select_room" class="block mb-2 text-sm font-medium text-gray-900">Selecione a sala</label>
+                            <select name="select_room" id="select_room" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option selected>Selecione a sala</option>
+                                <option value="node">Node</option>
+                                <option value="java">Java</option>
+                                <option value="reactjs">ReactJS</option>
+                                <option value="elixir">Elixir</option>
+                            </select>
 
-            <div class="row">
-                <button type="submit" class="btn btn-primary mb-3">Entrar</button>
+                            <button type="submit" class="w-full mt-8 text-white bg-cyan-700 hover:bg-cyan-800 focus:ring-4 focus:outline-none focus:ring-cyan-700 font-medium rounded-lg justify-between text-sm px-5 py-3 text-center inline-flex items-center">
+                                Entrar na sala
+                                <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </form>
+    </div>
+
 </body>
 
 </html>

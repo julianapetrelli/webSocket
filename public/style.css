@@ -1,64 +1,31 @@
-body {
-  outline: none;
-  cursor: pointer;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-form {
-  display: flex;
-  flex-direction: row;
-
-  margin: 10px;
-  padding: 5px;
-
-  margin-top: 140px;
+body {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('https://i.imgur.com/6j4G4uX.png'); */
+  background-repeat: repeat;
 }
 
 button {
-  width: 400px;
-  height: 40px;
-  background: #4b9847;
-  outline: none;
+  cursor: pointer;
+}
+
+::-moz-selection {
   color: #fff;
-  cursor: pointer;
+  background: #6FA597;
 }
 
-button:hover {
-  opacity: 0.8;
-}
-
-select,
-input {
-  width: 400px;
-  height: 30px;
-  padding: 5px 0px;
-  outline: none;
-}
-
-.row {
-  padding: 5px 0px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 18px;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.new_message {
-  padding: 5px;
-}
-
-#message_input {
-  margin-top: 50px;
-}
-
-.logout {
-  background: rgb(56, 3, 3);
-  cursor: pointer;
+::selection {
+  color: #fff;
+  background: #6FA597;
 }
